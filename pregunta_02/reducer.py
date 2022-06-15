@@ -1,3 +1,30 @@
 #
 # >>> Escriba el codigo del reducer a partir de este punto <<<
 #
+import sys
+
+if __name__ == '__main__':
+
+    curkey = None
+    total = 0
+    aux = 0
+    maximo = 0
+
+    for line in sys.stdin:
+
+        key, val = line.split("\t")
+        val = int(val)
+        aux = val
+
+        if key == curkey:
+            if aux > maximo:
+                maximo = aux
+        else:
+            if curkey is not None:
+                sys.stdout.write("{}\t{}\n".format(curkey, maximo))
+
+            curkey = key
+            maximo = val
+    
+    sys.stdout.write("{}\t{}\n".format(curkey, maximo))
+    
