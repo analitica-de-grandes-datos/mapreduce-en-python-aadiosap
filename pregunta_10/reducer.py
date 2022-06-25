@@ -28,4 +28,4 @@ if __name__ == '__main__':
 				resultado = None
 	lista=sorted(lista)
 	resultado=",".join(map(lambda x:str(x),lista))			
-	sys.stdout.write("{} {}\n".format(curkey,resultado))
+	sys.stdout.write("{}\t{}\n".format(curkey,resultado))
