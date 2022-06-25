@@ -23,9 +23,11 @@ if __name__ == '__main__':
 					lista=sorted(lista)
 					resultado=",".join(map(lambda x:str(x),lista))
 					sys.stdout.write("{}\t{}\n".format(curkey,resultado))
+					lista = []
 				curkey = key
-				lista=[]
+				lista.append(val)
 				resultado = None
 	lista=sorted(lista)
 	resultado=",".join(map(lambda x:str(x),lista))			
 	sys.stdout.write("{}\t{}\n".format(curkey,resultado))
+	lista = []
