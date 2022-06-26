@@ -15,4 +15,4 @@ if __name__ == '__main__':
 		lista1.sort(key=lambda x:(x[0],x[2]),reverse=False)
 
 	for elemento in lista1:
-		sys.stdout.write("{}\t{}\t{}\n".format(elemento[0],elemento[1],elemento[2]))
+		sys.stdout.write("{}   {}   {}\n".format(elemento[0],elemento[1],elemento[2]))
