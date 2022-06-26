@@ -19,11 +19,10 @@ if __name__ == '__main__':
 				lista.append(val)
 			else:
 				if curkey is not None:
-					lista.append(val)
 					lista=sorted(lista)
 					resultado=",".join(map(lambda x:str(x),lista))
 					sys.stdout.write("{}\t{}\n".format(curkey,resultado))
-					lista = []
+					lista=[]					
 				curkey = key
 				lista.append(val)
 				resultado = None
