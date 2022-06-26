@@ -14,7 +14,7 @@ if __name__ == '__main__':
 		
 	for line in sys.stdin:
 			key,val = line.split("\t")
-			val = int(val)
+			val = float(val)
 			aux = val
 			aux1 = val
 			if key == curkey:
