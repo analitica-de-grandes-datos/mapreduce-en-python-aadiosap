@@ -4,7 +4,15 @@
 import sys
 
 if __name__ == '__main__':
+	lista1 = []
+
 	for line in sys.stdin:
-		val, key, date= line.split("\t")
-		date = date.replace("\n","")      
-		sys.stdout.write("{}\t{}\t{}\n".format(val,date,key))
+		key,val1,val2=line.split(",")
+		val2=int(val2)
+
+		lista1.append((key,val1,val2))
+
+		lista1.sort(key=lambda x:(x[0],x[2]),reverse=False)
+
+	for elemento in lista1:
+		sys.stdout.write("{}\t{}\t{}\n".format(elemento[0],elemento[1],elemento[2]))
